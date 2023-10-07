@@ -9,32 +9,43 @@ public class GestorPelicula {
     private List<Pelicula> Peliculas;
 
     /////////////Métodos///////////////
-
     public GestorPelicula(){
         Peliculas = new ArrayList<>();
     }
 
     public void AgregarPelicula(Pelicula pelicula){
         Peliculas.add(pelicula);
-        //System.out.println(Peliculas);
     }
 
     public void EliminarPelicula(int Id){
-        System.out.println("Se eliminó el elemento con el Id " + Id);
+        System.out.println("***** Se eliminó el elemento con el Id " + Id + " *****\n");
         Peliculas.remove(Id);
     }
 
     public void ObtenerPeliculas(){
-        System.out.println("Listado de Pelicas");
-        System.out.println(Peliculas);
+        System.out.println("***** Listado de Películas *****");
+        for(Pelicula pelicula : Peliculas){
+            System.out.println(pelicula.getNombre());
+        }
+        System.out.println("\n");
     }
 
     public void ObtenerPeliculasDisponibles(){
-        System.out.println(Peliculas);
+        System.out.println("***** Películas Disponibles *****");
+        for(Pelicula pelicula : Peliculas){
+            if (pelicula.isDisponible()){
+                System.out.println(pelicula.getNombre());
+            }
+        }
     }
 
     public void ObtenerPeliculasNoDisponibles(){
-
+        System.out.println("***** Peliculas no Disponibles *****");
+        for(Pelicula pelicula : Peliculas){
+            if (!pelicula.isDisponible()){
+                System.out.println(pelicula.getNombre());
+            }
+        }
     }
 
     public void MarcarPeliculaComoDisponible(int Id){

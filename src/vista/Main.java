@@ -9,17 +9,29 @@ import java.util.List;
 public class Main {
     public static void main(String[] args){
 
+        //Se inicializa el array de objetos de tipo de pelicula para hacer los métodos
         GestorPelicula gestionarPeliculas = new GestorPelicula();
 
-        Pelicula pelicula1 = new Pelicula(0,"Interestellar",true);
-        Pelicula pelicula2 = new Pelicula(1,"Rango", true);
+        //Objetos de tipo película
+        Pelicula pelicula1 = new Pelicula(0,"Interestellar",false);
+        Pelicula pelicula2 = new Pelicula(1,"Rango", false);
+        Pelicula pelicula3 = new Pelicula(2,"Sangre por Sangre",true);
 
+        //Agrega los objetos a la lista
         gestionarPeliculas.AgregarPelicula(pelicula1);
         gestionarPeliculas.AgregarPelicula(pelicula2);
-
-        //gestionarPeliculas.EliminarPelicula(0);
-
+        gestionarPeliculas.AgregarPelicula(pelicula3);
         gestionarPeliculas.ObtenerPeliculas();
 
+        //Elimina la pelicula según el Id
+        //gestionarPeliculas.EliminarPelicula(0);
+
+        //Obtiene todo el listado de peliculas
+        //gestionarPeliculas.ObtenerPeliculas();
+
+        //Obtiene las pelicuas disponibles
+        //gestionarPeliculas.ObtenerPeliculasDisponibles();
+
+        gestionarPeliculas.ObtenerPeliculasNoDisponibles();
     }
 }

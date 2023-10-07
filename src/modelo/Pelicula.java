@@ -9,7 +9,6 @@ public class Pelicula extends GestorPelicula {
 
 
     //////////CONSTRUCTOR////////////////
-
     public Pelicula(int id, String nombre, boolean disponible) {
         Id = id;
         Nombre = nombre;
@@ -17,7 +16,6 @@ public class Pelicula extends GestorPelicula {
     }
 
     //////////////GETTERS AND SETTERS////////////////
-
     public int getId() {
         return Id;
     }
