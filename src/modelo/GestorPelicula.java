@@ -43,13 +43,13 @@ public class GestorPelicula {
         System.out.println("***** Peliculas no Disponibles *****");
         for(Pelicula pelicula : Peliculas){
             if (!pelicula.isDisponible()){
-                System.out.println(pelicula.getNombre());
+                System.out.println("ID:" + pelicula.getId() + " Título: " + pelicula.getNombre());
             }
         }
     }
 
     public void MarcarPeliculaComoDisponible(int Id){
-
+        Peliculas.get(Id).setDisponible(true);
     }
 
 }

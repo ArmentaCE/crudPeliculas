@@ -21,17 +21,24 @@ public class Main {
         gestionarPeliculas.AgregarPelicula(pelicula1);
         gestionarPeliculas.AgregarPelicula(pelicula2);
         gestionarPeliculas.AgregarPelicula(pelicula3);
-        gestionarPeliculas.ObtenerPeliculas();
 
-        //Elimina la pelicula según el Id
-        //gestionarPeliculas.EliminarPelicula(0);
-
-        //Obtiene todo el listado de peliculas
         //gestionarPeliculas.ObtenerPeliculas();
 
-        //Obtiene las pelicuas disponibles
+        //Elimina la película según el Id
+        //gestionarPeliculas.EliminarPelicula(0);
+
+        //Obtiene todo el listado de películas
+        //gestionarPeliculas.ObtenerPeliculas();
+
+        //Obtiene las pelícuas disponibles
         //gestionarPeliculas.ObtenerPeliculasDisponibles();
 
+        //Obtiene las películas no disponibles
         gestionarPeliculas.ObtenerPeliculasNoDisponibles();
+
+        //Marca las película como disponible mediante el Id
+        gestionarPeliculas.MarcarPeliculaComoDisponible(0);
+
+        //gestionarPeliculas.ObtenerPeliculasNoDisponibles();
     }
 }
