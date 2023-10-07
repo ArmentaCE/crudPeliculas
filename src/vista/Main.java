@@ -9,12 +9,17 @@ import java.util.List;
 public class Main {
     public static void main(String[] args){
 
-        Pelicula pelicula1 = new Pelicula(1,"Interestellar", true);
-        //Pelicula pelicula2 = new Pelicula(2,"Rango", true);
+        GestorPelicula gestionarPeliculas = new GestorPelicula();
 
-        pelicula1.AgregarPelicula(pelicula1);
+        Pelicula pelicula1 = new Pelicula(0,"Interestellar",true);
+        Pelicula pelicula2 = new Pelicula(1,"Rango", true);
 
-        //List<Object>ColeccionPeliculas = new ArrayList<>();
+        gestionarPeliculas.AgregarPelicula(pelicula1);
+        gestionarPeliculas.AgregarPelicula(pelicula2);
+
+        //gestionarPeliculas.EliminarPelicula(0);
+
+        gestionarPeliculas.ObtenerPeliculas();
 
     }
 }

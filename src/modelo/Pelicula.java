@@ -2,15 +2,21 @@ package modelo;
 
 public class Pelicula extends GestorPelicula {
 
+    /////////////PARÁMETROS////////////////////////////
+    private int Id;
+    private  String Nombre;
+    private  boolean Disponible;
+
+
+    //////////CONSTRUCTOR////////////////
+
     public Pelicula(int id, String nombre, boolean disponible) {
         Id = id;
         Nombre = nombre;
         Disponible = disponible;
     }
 
-    private int Id;
-    private String Nombre;
-    private boolean Disponible;
+    //////////////GETTERS AND SETTERS////////////////
 
     public int getId() {
         return Id;
